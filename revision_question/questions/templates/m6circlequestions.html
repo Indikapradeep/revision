@@ -1,0 +1,32 @@
+{% extends "first.html" %}
+   
+{% block content %} 
+  <h2>Start Your Revision Circles </h2>
+  {% for x in m6circlequestions %}
+    {{forloop.counter}}.<br>
+     {{ x.qcontent}} <br>
+    <input type="radio" id="qans1" name="qanswers" value={{x.qans1}}>{{x.qans1}}  </input><br>
+    <input type="radio" id="qans2" name="qanswers" value={{x.qans2}}>{{x.qans2}}  </input><br>
+    <input type="radio" id="qans3" name="qanswers" value={{x.qans3}}>{{x.qans3}}  </input><br>
+    <input type="radio" id="qans4" name="qanswers" value={{x.qans4}}>{{x.qans4}}  </input><br>
+     <input type="hidden"  id="qans"  name="qans" value={{x.qans}}>
+     <button type="submit" value="submit" id="click"> Check answer </button>
+     <script type="text/javascript">
+    
+        document.getElementById('click').onclick = function() {
+                var selected = document.querySelector('input[type=radio][name=qanswers]:checked');
+                var qans = document.getElementById("qans");
+            if (selected.value == qans.value){
+                alert("Well Done ☻")
+            }
+            else {
+                alert("Your answer is wrong .")
+            }
+            
+            
+                
+               
+             }
+    </script>
+  {% endfor %}  
+  {% endblock %}

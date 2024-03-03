@@ -1,0 +1,14 @@
+{% extends "first.html" %}
+   
+{% block content %} 
+  <h2>Select the lesson to Revision Your knowledge</h2>
+  {% for x in grade6maths %}
+    {% if x.lesson_name == "Circles" %}
+    <li> <button><a href="\m6circlequestions">{{x.lesson_name}}</a> </button>   </li>
+    {% else %}
+    <li> <button ><a href="\questions"> {{x}} </a></button></li>
+    {% endif %}
+    {% endfor %}
+  {% endblock %}
+
+

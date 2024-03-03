@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link  rel="stylesheet"  href="{% static 'style.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Welcome to Revision your knowledge</h1>
+      </div>
+      
+      <div class="row">
+        <div class="col-3 col-s-3 menu">
+    
+            <li><a href="/grades" class="btn btn-primary"> Go to Grades</a></li>
+           
+          
+        </div>
+      
+        <div class="col-6 col-s-9">
+            <title>{% block title %}{% endblock %}</title>
+            {% block content %}
+            {% endblock %}
+        </div>
+      
+        <div class="col-3 col-s-12">
+          <div class="aside">
+            <h2>What?</h2>
+            <p>Chania is a city on the island of Crete.</p>
+            <h2>Where?</h2>
+            <p>Crete is a Greek island in the Mediterranean Sea.</p>
+            <h2>How?</h2>
+            <p>You can reach Chania airport from all over Europe.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <p>Resize the browser window to see how the content respond to the resizing.</p>
+      </div>
+
+</body>
+</html>

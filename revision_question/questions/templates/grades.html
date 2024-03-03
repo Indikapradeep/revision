@@ -1,0 +1,14 @@
+{% extends "first.html" %}
+   
+{% block content %} 
+  <h2>Select the grade to Revision</h2>
+{% for x in grades %}
+    {% if x == 6 %}
+    <li>  <button style="width: 20%"><a href="\grade6subjects"> Grade {{x}} </a></button></li><br>
+    {% elif x == 11 %}
+    <li> <button ><a href="\grade11subjects"> {{x}} </a></button></li><br>
+    {% else %}
+    <li> <button ><a href="\questions"> {{x}} </a></button></li><br>
+    {% endif %}
+{% endfor %}  
+{% endblock %}       
